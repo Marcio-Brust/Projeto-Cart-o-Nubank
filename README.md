@@ -1,2 +1,3 @@
 # Projeto-Cartão-Nubank
- Fiz esse projeto visando colocar em prática o que estudo.
+
+Projeto feito em HTML, CSS e JavaScript com intuito de melhorar meu aprendizado, vo^Ce pode conferir uma demo clicando aqui.
