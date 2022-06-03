@@ -15,13 +15,14 @@ const masterCard = $$(".masterCard");
 const cartaoLogo = $$(".cartaoLogo");
 
 function logoCartao() {
-  logo.innerHTML = '<img src="./IMG/Nubank_logo_2021.svg-brilho.png" alt="" >';
+  logo.innerHTML =
+    '<img src="./assets/imgs/Nubank_logo_2021.svg-brilho.png" alt="" >';
 }
 logoRoxo.addEventListener("click", logoCartao);
 
 function logoCartaoBrnaco() {
   logo.innerHTML =
-    '<img src="./IMG/Nubank_logo_2021.svg-branco-brilho.png" alt="" >';
+    '<img src="./assets/imgs/Nubank_logo_2021.svg-branco-brilho.png" alt="" >';
 }
 logoBranco.addEventListener("click", logoCartaoBrnaco);
 
