@@ -46,15 +46,16 @@ horizontal.addEventListener("click", removevertical);
 function nome() {
   nomeCartao.innerText = `${this.value}`;
 }
+
 function flutuar() {
   cartao.classList.add("active");
 }
-nomeCompleto.addEventListener("input", nome);
+nomeCompleto.addEventListener("keyup", nome);
 nomeCompleto.addEventListener("click", flutuar);
 
 function boxColor() {
   const cor = cartao.classList.length > 1;
-  const cores = this.className.toString();
+  const cores = this.className;
   if (cor) {
     cartao.classList.remove(
       "active",
