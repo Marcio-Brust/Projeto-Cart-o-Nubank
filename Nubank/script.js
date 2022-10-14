@@ -13,6 +13,7 @@ const header = $$(".header");
 const logoMaster = $$(".logoMasterCard");
 const masterCard = $$(".masterCard");
 const cartaoLogo = $$(".cartaoLogo");
+const escolherCor = $$(".escolherCor");
 
 function logoCartao() {
   logo.innerHTML =
@@ -52,9 +53,12 @@ function flutuar() {
 nomeCompleto.addEventListener("input", nome);
 nomeCompleto.addEventListener("click", flutuar);
 
-function boxColor() {
+function boxColor(event) {
+  cartao.removeAttribute("style");
+  escolherCor.removeAttribute("style");
+  if (event.type === "touchstart") event.preventDefault();
   const cor = cartao.classList.length > 1;
-  const cores = this.className.toString();
+  const cores = this.className;
   if (cor) {
     cartao.classList.remove(
       "active",
@@ -63,12 +67,21 @@ function boxColor() {
       "preto",
       "violeta",
       "azulEscuro",
-      "degrader"
+      "degrader",
+      "escolherCor"
     );
   }
   cartao.classList.add(cores);
 }
+function handleCor() {
+  cartao.style.background = `${this.value}`;
+  this.style.background = `${this.value}`;
+}
+escolherCor.addEventListener("input", handleCor);
 
 colorBox.forEach((item) => {
   item.addEventListener("click", boxColor);
+});
+colorBox.forEach((item) => {
+  item.addEventListener("touchstart", boxColor);
 });

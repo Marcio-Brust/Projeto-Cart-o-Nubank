@@ -378,7 +378,7 @@ input.degrader {
 }
 .cartao.active {
   animation-name: flutuante;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 @keyframes flutuante {
@@ -386,10 +386,15 @@ input.degrader {
     margin-top: 0px;
   }
   to {
-    margin-top: 2px;
+    margin-top: 8px;
   }
 }
+
 @media (max-width: 650px) {
+  .cartao,
+  .nomeCompleto {
+    margin-left: 1px;
+  }
   .dados {
     display: grid;
     grid-template-columns: 1fr;
@@ -406,12 +411,20 @@ input.degrader {
     height: 10rem;
     width: 20rem;
     margin: 0px;
+    position: fixed;
   }
+  .cartao.vertica,
+  .nomeCompleto {
+    margin-top: 10px;
+  }
+
   .cartao.vertical {
     height: 10rem;
     width: 20rem;
     margin: 0px;
+    position: fixed;
   }
+
   .logoCartao img {
     width: 120px;
   }
@@ -420,6 +433,7 @@ input.degrader {
     font-size: 1rem;
     white-space: nowrap;
   }
+
   .cartaoLogo {
     width: 260px;
   }
